@@ -3,10 +3,12 @@ function display() {
 }
 
 function number1() {
-  div.innerHTML = ""
+  div.innerHTML = "1"
 }
 
-function number2() {}
+function number2() {
+  div.innerHTML = "2"
+}
 
 function number3() {}
 
