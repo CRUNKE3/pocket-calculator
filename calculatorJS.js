@@ -3,6 +3,8 @@ function display() {
 }
 
 function number1() {
+  var div = document.getElementById("display");
+
   div.innerHTML = "1"
 }
 
@@ -10,38 +12,38 @@ function number2() {
   div.innerHTML = "2"
 }
 
-function number3() {}
+function number3() {var div = document.getElementById("display");}
 
-function number4() {}
+function number4() {var div = document.getElementById="display";}
 
-function number5() {}
+function number5() {var div = document.getElementById="display";}
 
-function number6() {}
+function number6() {var div = document.getElementById="display";}
 
-function number7() {}
+function number7() {var div = document.getElementById="display";}
 
-function number8() {}
+function number8() {var div = document.getElementById="display";}
 
-function number9() {}
+function number9() {var div = document.getElementById="display";}
 
-function number0() {}
+function number0() {var div = document.getElementById="display";}
 
-function addition() {}
+function addition() {var div = document.getElementById="display";}
 
-function subtraction() {}
+function subtraction() {var div = document.getElementById="display";}
 
-function multiplication() {}
+function multiplication() {var div = document.getElementById="display";}
 
-function division() {}
+function division() {var div = document.getElementById="display";}
 
-function equals() {}
+function equals() {var div = document.getElementById="display";}
 
-function negation() {}
+function negation() {var div = document.getElementById="display";}
 
-function percentage() {}
+function percentage() {var div = document.getElementById="display";}
 
-function clear() {}
+function clear() {var div = document.getElementById="display";}
 
-function squareRoot() {}
+function squareRoot() {var div = document.getElementById="display";}
 
-function exponent() {}
+function exponent() {var div = document.getElementById="display";}
