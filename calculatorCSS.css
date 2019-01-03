@@ -4,4 +4,34 @@ h1 {
 
 body {
   align-content: center;
+  background-image: radial-gradient(lime, #acffa8, #d5ffd3);
+}
+
+button {
+  padding: 2.5em;
+  background-image: linear-gradient(#ddffef, #afffaa);
+  display: inline-block;
+}
+
+button:hover {
+  background-image: linear-gradient(#bed8cc, #88c984);
+}
+
+.button {
+  text-align: center;
+  margin: 3px;
+  font-family: sans-serif;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+.display {
+  border-style: groove;
+  width: 24em;
+  height: 2em;
+  background-color: white;
 }

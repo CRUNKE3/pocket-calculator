@@ -1,6 +1,10 @@
-function display() {}
+function display() {
 
-function number1() {}
+}
+
+function number1() {
+  div.innerHTML = ""
+}
 
 function number2() {}
 
