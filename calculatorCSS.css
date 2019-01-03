@@ -35,3 +35,15 @@ table {
   height: 2em;
   background-color: white;
 }
+
+#equal {
+  width: 13em;
+}
+
+#percentage {
+  width: 13em;
+}
+
+#negative {
+  width: 13em;
+}
