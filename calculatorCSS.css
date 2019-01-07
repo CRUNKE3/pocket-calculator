@@ -47,3 +47,7 @@ table {
 #negative {
   width: 13em;
 }
+
+#display {
+  text-align: center;
+}
