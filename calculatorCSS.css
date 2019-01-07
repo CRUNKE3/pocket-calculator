@@ -11,6 +11,8 @@ button {
   padding: 2.5em;
   background-image: linear-gradient(#ddffef, #afffaa);
   display: inline-block;
+  width: 100px;
+  height: 100px;
 }
 
 button:hover {
@@ -49,5 +51,13 @@ table {
 }
 
 #display {
-  text-align: center;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#displaythang {
+  font-size: 35px;
 }
