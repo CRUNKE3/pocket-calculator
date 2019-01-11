@@ -8,7 +8,7 @@ body {
 }
 
 button {
-  padding: 2.5em;
+  padding: 10px;
   background-image: linear-gradient(#ddffef, #afffaa);
   display: inline-block;
   width: 100px;
@@ -32,10 +32,8 @@ table {
 }
 
 .display {
-  border-style: groove;
-  width: 24em;
-  height: 2em;
-  background-color: white;
+  width: 428px;
+  height: 75px;
 }
 
 #equal {
@@ -60,10 +58,7 @@ table {
 
 input {
   text-align: right;
-  width: 428px;
+  width: 450px;
   height: 75px;
-  margin-left: -3px;
-  margin-top: -3px;
   font-size: 40px;
 }
-
