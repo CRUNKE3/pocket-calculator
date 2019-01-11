@@ -1,3 +1,3 @@
 function number(num) {
-  document;
+  document.calc.display.value = document.calc.display.value + num;
 }
