@@ -13,18 +13,22 @@ function clearButton() {
 }
 
 function addition() {
-  function numeroUno() {
-    numero_uno = document.calc.display.value;
-  };
+  numeroUno()
   let additionStatus = true;
   document.calc.display.value = "";
 }
 
 function equals() {
-
+  let firstNumber = numeroUno();
   let numero_dos = document.calc.display.value;
   if (additionStatus=true) {
-    let displayAnswer = numero_uno + numero_dos;
-    document.calc.display = displayAnswer;
+    document.calc.display.value = "";
+    let displayAnswer = firstNumber + numero_dos;
+    document.calc.display.value = displayAnswer;
   }
+}
+
+function numeroUno() {
+	var numero_uno = document.calc.display.value;
+	return numero_uno;
 }
