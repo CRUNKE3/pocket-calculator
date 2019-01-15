@@ -12,23 +12,17 @@ function clearButton() {
   numero_dos="";
 }
 
+let numeroUno = 0;
+
 function addition() {
-  numeroUno()
+  numeroUno = document.calc.display.value;
   let additionStatus = true;
   document.calc.display.value = "";
-}
-
+    }
 function equals() {
-  let firstNumber = numeroUno();
-  let numero_dos = document.calc.display.value;
   if (additionStatus=true) {
+    numeroDos = document.calc.display.value;
     document.calc.display.value = "";
-    let displayAnswer = firstNumber + numero_dos;
-    document.calc.display.value = displayAnswer;
+    document.calc.display.value = Number(numeroUno)+Number(numeroDos);
   }
-}
-
-function numeroUno() {
-	var numero_uno = document.calc.display.value;
-	return numero_uno;
 }
