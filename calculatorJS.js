@@ -5,7 +5,7 @@ function number(num) {
   document.calc.display.value = document.calc.display.value + num;
 }
 
-function clearbutton() {
+function clearButton() {
   document.calc.display.value = "";
   additionStatus = false;
   numer_ouno="";
