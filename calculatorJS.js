@@ -1,5 +1,5 @@
 let additionStatus = false;
-
+let subtractionStatus = false;
 
 function number(num) {
   document.calc.display.value = document.calc.display.value + num;
@@ -19,10 +19,19 @@ function addition() {
   let additionStatus = true;
   document.calc.display.value = "";
     }
+function subtraction() {
+  numeroUno = document.calc.display.value;
+  let subtractionStatus = true;
+  document.calc.display.value = "";
+}
 function equals() {
   if (additionStatus=true) {
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)+Number(numeroDos);
+  } else if (subtractionStatus = true) {
+    numeroDos = document.calc.display.value;
+    document.calc.display.value = "";
+    document.calc.display.value = Number(numeroUno)-Number(numeroDos);
   }
 }
