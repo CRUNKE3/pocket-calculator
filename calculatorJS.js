@@ -49,17 +49,20 @@ function equals() {
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)+Number(numeroDos);
+    additionStatus = false;
   } else if (subtractionStatus === true) {
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)-Number(numeroDos);
+    subtractionStatus = false; 
   } else if (multiplicationStatus === true) {
 	numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)*Number(numeroDos);
+    multiplicationStatus = false; 
   } else if (divisionStatus === true) {
   	numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)/Number(numeroDos);
+    divisionStatus = false;
   }
-}
