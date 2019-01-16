@@ -1,5 +1,7 @@
 let additionStatus = false;
 let subtractionStatus = false;
+let multiplicationStatus = false;
+let divisionStatus = false;
 
 function number(num) {
   document.calc.display.value = document.calc.display.value + num;
@@ -8,6 +10,9 @@ function number(num) {
 function clearButton() {
   document.calc.display.value = "";
   additionStatus = false;
+  subtractionStatus = false;
+  multiplicationStatus = false;
+  divisionStatus = false;
   numer_ouno="";
   numero_dos="";
 }
@@ -24,6 +29,21 @@ function subtraction() {
   subtractionStatus = true;
   document.calc.display.value = "";
 }
+function multiplication() {
+  numeroUno = document.calc.display.value;
+    multiplicationStatus = true;
+    document.calc.display.value = "";
+}
+function division() {
+	numeroUno = document.calc.display.value;
+    divisionStatus = true;
+    document.calc.display.value = "";
+}
+function squared() {
+	numeroUno = Number(document.calc.display.value)*Number(document.calc.display.value)
+	document.calc.display.value = numeroUno;
+}
+
 function equals() {
   if (additionStatus === true) {
     numeroDos = document.calc.display.value;
@@ -33,5 +53,13 @@ function equals() {
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)-Number(numeroDos);
+  } else if (multiplicationStatus === true) {
+	numeroDos = document.calc.display.value;
+    document.calc.display.value = "";
+    document.calc.display.value = Number(numeroUno)*Number(numeroDos);
+  } else if (divisionStatus === true) {
+  	numeroDos = document.calc.display.value;
+    document.calc.display.value = "";
+    document.calc.display.value = Number(numeroUno)/Number(numeroDos);
   }
 }
