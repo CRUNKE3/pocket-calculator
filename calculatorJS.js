@@ -2,6 +2,7 @@ let additionStatus = false;
 let subtractionStatus = false;
 let multiplicationStatus = false;
 let divisionStatus = false;
+let operationStatus = false;
 
 function number(num) {
   document.calc.display.value = document.calc.display.value + num;
@@ -20,10 +21,15 @@ function clearButton() {
 let numeroUno = 0;
 
 function addition() {
+  if (additionStatus === true) {
+    numeroDos = document.calc.display.value;
+    document.calc.display.value = Number(numeroUno)+Number(numeroDos);
+  } else {
   numeroUno = document.calc.display.value;
   additionStatus = true;
   document.calc.display.value = "";
-    }
+  }
+}
 function subtraction() {
   numeroUno = document.calc.display.value;
   subtractionStatus = true;
@@ -46,7 +52,12 @@ function squared() {
 function negative() {
 	numeroUno = Number(document.calc.display.value)*-1;
 	document.calc.display.value = numeroUno;
-	}
+}
+function decimalPoint() {
+  numeroUno = document.calc.display.value;
+  document.calc.display.value = numeroUno + ".";
+
+}
 
 function equals() {
   if (additionStatus === true) {
@@ -58,12 +69,12 @@ function equals() {
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)-Number(numeroDos);
-    subtractionStatus = false; 
+    subtractionStatus = false;
   } else if (multiplicationStatus === true) {
 	numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)*Number(numeroDos);
-    multiplicationStatus = false; 
+    multiplicationStatus = false;
   } else if (divisionStatus === true) {
   	numeroDos = document.calc.display.value;
     document.calc.display.value = "";
