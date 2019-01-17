@@ -14,16 +14,24 @@ function clearButton() {
   subtractionStatus = false;
   multiplicationStatus = false;
   divisionStatus = false;
-  numer_ouno="";
-  numero_dos="";
+  operationStatus = false;
+  numeroUno=0;
+  numeroDos=0;
 }
 
+let numeroTres = 0;
 let numeroUno = 0;
+let numeroDos = 0;
 
 function addition() {
-  if (additionStatus === true) {
+  if (operationStatus === true) {
     numeroDos = document.calc.display.value;
-    document.calc.display.value = Number(numeroUno)+Number(numeroDos);
+
+  } else if (additionStatus === true) {
+    numeroDos = document.calc.display.value;
+    numeroTres = Number(numeroUno)+Number(numeroDos);
+    document.calc.display.value = "";
+    operationStatus = true
   } else {
   numeroUno = document.calc.display.value;
   additionStatus = true;
@@ -61,6 +69,9 @@ function decimalPoint() {
 
 function equals() {
   if (additionStatus === true) {
+    if (operationStatus === true){
+      document.calc.display.value = numeroTres;
+    }
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)+Number(numeroDos);
