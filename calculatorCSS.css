@@ -8,7 +8,7 @@ body {
 }
 
 button {
-  padding: 10px;
+  padding: 2.5em;
   background-image: linear-gradient(#ddffef, #afffaa);
   display: inline-block;
   width: 100px;
@@ -32,33 +32,24 @@ table {
 }
 
 .display {
-  width: 428px;
-  height: 75px;
-}
-
-#equal {
-  width: 13em;
-}
-
-#percentage {
-  width: 13em;
-}
-
-#negative {
-  width: 13em;
+  border-style: groove;
+  width: 24em;
+  height: 2em;
+  background-color: white;
 }
 
 #display {
   text-align: right;
-  padding-top: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  width: 428px;
+  height: 75px;
+  margin: auto;
 }
 
 input {
   text-align: right;
-  width: 450px;
+  width: 428px;
   height: 75px;
+  margin-left: -3px;
+  margin-top: -3px;
   font-size: 40px;
 }
