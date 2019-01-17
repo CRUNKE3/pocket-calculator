@@ -43,6 +43,10 @@ function squared() {
 	numeroUno = Number(document.calc.display.value)*Number(document.calc.display.value)
 	document.calc.display.value = numeroUno;
 }
+function negative() {
+	numeroUno = Number(document.calc.display.value)*-1;
+	document.calc.display.value = numeroUno;
+	}
 
 function equals() {
   if (additionStatus === true) {
@@ -66,3 +70,4 @@ function equals() {
     document.calc.display.value = Number(numeroUno)/Number(numeroDos);
     divisionStatus = false;
   }
+}
