@@ -39,7 +39,7 @@ function addition() {
     document.calc.display.value = "";
     operationStatus === false;
   } else if (operationPlusStatus === true || operationMinusStatus === true || operationTimesStatus === true || operationDividedByStatus === true) {
-    numeroDos = Number(document.calc.display.value)+Number(numeroDos);
+    numeroDos = Number(numeroTres)-Number(numeroUno)+Number(document.calc.display.value);
     numeroTres = Number(numeroUno)+Number(numeroDos);
     operationPlus2Status = true;
     document.calc.display.value = "";
