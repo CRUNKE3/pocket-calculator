@@ -33,14 +33,14 @@ let numeroCuatro = 0;
 
 function addition() {
   if (operationPlus2Status === true) {
-    numeroCuatro = Number(document.calc.display.value)+Number(numeroDos);
-    numeroTres = Number(numeroUno)+Number(numeroCuatro);
+    numeroDos = numeroTres;
+    numeroTres = Number(document.calc.display.value)+Number(numeroDos);
     operationPlus2Status = true;
     document.calc.display.value = "";
     operationStatus === false;
   } else if (operationPlusStatus === true || operationMinusStatus === true || operationTimesStatus === true || operationDividedByStatus === true) {
-    numeroDos = Number(numeroTres)-Number(numeroUno)+Number(document.calc.display.value);
-    numeroTres = Number(numeroUno)+Number(numeroDos);
+    numeroDos = numeroTres;
+    numeroTres = Number(document.calc.display.value)+Number(numeroDos);
     operationPlus2Status = true;
     document.calc.display.value = "";
   } else if (additionStatus === true) {
