@@ -20,6 +20,12 @@ function clearButton() {
   divisionStatus = false;
   operationPlusStatus = false;
   operationPlus2Status = false;
+  operationMinusStatus = false;
+  operationMinus2Status = false;
+  operationTimesStatus = false;
+  operationTimes2Status = false;
+  operationDividedByStatus = false;
+  operationDividedBy2Status = false;
   numeroUno=0;
   numeroDos=0;
   numeroTres=0;
@@ -40,7 +46,8 @@ function addition() {
     operationStatus === false;
   } else if (operationPlusStatus === true || operationMinusStatus === true || operationTimesStatus === true || operationDividedByStatus === true) {
     numeroDos = numeroTres;
-    numeroTres = Number(document.calc.display.value)+Number(numeroDos);
+    numeroUno = document.calc.display.value;
+    numeroTres = Number(numeroUno)+Number(numeroDos);
     operationPlus2Status = true;
     document.calc.display.value = "";
   } else if (additionStatus === true) {
@@ -55,9 +62,27 @@ function addition() {
   }
 }
 function subtraction() {
+if (operationPlus2Status === true) {
+    numeroDos = numeroTres;
+    numeroTres = Number(document.calc.display.value)-Number(numeroDos);
+    operationPlus2Status = true;
+    document.calc.display.value = "";
+    operationStatus === false;
+  } else if (operationMinusStatus === true || operationPlusStatus === true || operationTimesStatus === true || operationDividedByStatus === true) {
+    numeroDos = numeroTres;
+    numeroTres = Number(document.calc.display.value)-Number(numeroDos);
+    operationPlus2Status = true;
+    document.calc.display.value = "";
+  } else if (subtractionStatus === true) {
+    numeroDos = document.calc.display.value;
+    numeroTres = Number(numeroUno)-Number(numeroDos);
+    document.calc.display.value = "";
+    operationPlusStatus = true;
+  } else {
   numeroUno = document.calc.display.value;
   subtractionStatus = true;
   document.calc.display.value = "";
+  }
 }
 function multiplication() {
   numeroUno = document.calc.display.value;
@@ -80,27 +105,33 @@ function negative() {
 function decimalPoint() {
   numeroUno = document.calc.display.value;
   document.calc.display.value = numeroUno + ".";
-
+}
+function percentage() {
+	numeroUno = Number(document.calc.display.value)/100;
+	document.calc.display.value = numeroUno;
 }
 
 function equals() {
   if (additionStatus === true) {
     if (operationPlusStatus === true){
       document.calc.display.value = Number(numeroTres)+Number(document.calc.display.value);
-      if (operationPlus2Status === true){
+    }else if (operationPlus2Status === true){
         document.calc.display.value = Number(numeroTres)+Number(document.calc.display.value);
-      }
-    } else {
+    }else{
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)+Number(numeroDos);
     additionStatus = false;
   }
   } else if (subtractionStatus === true) {
+  	if (operationMinusStatus === true) {
+  	document.calc.display.value = Number(numeroTres)-Number(document.calc.display.value);
+  	}else{
     numeroDos = document.calc.display.value;
     document.calc.display.value = "";
     document.calc.display.value = Number(numeroUno)-Number(numeroDos);
     subtractionStatus = false;
+    }
   } else if (multiplicationStatus === true) {
 	numeroDos = document.calc.display.value;
     document.calc.display.value = "";
@@ -112,4 +143,5 @@ function equals() {
     document.calc.display.value = Number(numeroUno)/Number(numeroDos);
     divisionStatus = false;
   }
+}
 }
